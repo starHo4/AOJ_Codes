@@ -1,11 +1,14 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-void printA(vector<int> &A){
+void printA(vector<int> &A)
+{
     int N = A.size();
-    for(int i=0; i<N; i++){
+    for (int i = 0; i < N; i++)
+    {
         cout << A[i];
-        if(i != N - 1){
+        if (i != N - 1)
+        {
             cout << " ";
         }
     }
@@ -18,7 +21,8 @@ void insertSort(vector<int> &A, int N)
     {
         int v = A[i];
         int j = i - 1;
-        while(j >= 0 && A[j] > v){
+        while (j >= 0 && A[j] > v)
+        {
             A[j + 1] = A[j];
             j--;
         }
@@ -31,7 +35,8 @@ int main()
     int N;
     cin >> N;
     vector<int> A(N);
-    for(int i=0; i<N; i++){
+    for (int i = 0; i < N; i++)
+    {
         cin >> A[i];
     }
     insertSort(A, N);
